@@ -16,29 +16,20 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  The Bill Splitter App
 
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Split and track group bills with ease.
 
-## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  The product will give the user an easy way to manage and pay shared bills. The user will be able to track who owes them money for a bill as well as who they owe money to. This allows people to go out and focus on enjoying group experiences with the peace of mind of knowing that the payment process is simplified.
+	
+	Without this app, when a group of people get the bill. There is confusion about who owes what as well as keeping track of who has paid and who hasn't.
 
-## Problem ##
-  > Describe the problem your product solves.
+	This app will seperate bills that the user has paid with the ones that are still open. Also, if the user is the creater of a group, they will have visibility to who has paid and who still owes them money.
+	
+	"This app is a game changer."
+ 
+ 	All you do is log in, create a group, and invite friends. Then just input the bill and it will be automatically split up for you.
 
-## Solution ##
-  > Describe how your product elegantly solves the problem.
+	"This app simplified my bill paying experience."
 
-## Quote from You ##
-  > A quote from a spokesperson in your company.
-
-## How to Get Started ##
-  > Describe how easy it is to get started.
-
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+	You can download the app on either the google play store or the itunes app store.
