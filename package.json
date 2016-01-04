@@ -1,29 +1,27 @@
 {
-  "name": "Bill Splitter App",
+  "name": "bill-splitter-app",
   "version": "1.0.0",
   "description": "An app that splits the bill when in a large group",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
   "repository": {
     "type": "git",
     "url": "https://github.com/egeniesse/2015-11-mvp.git"
   },
-
   "author": "Eric Geniesse",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/egeniesse/2015-11-mvp"
   },
-
   "homepage": "https://github.com/egeniesse/2015-11-mvp",
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "mongo": "^0.1.0",
     "mongoose": "^4.3.4",
+    "nodemon": "^1.8.1",
     "passport": "^0.3.2"
   }
 }
