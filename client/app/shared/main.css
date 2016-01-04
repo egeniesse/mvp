@@ -1,0 +1,22 @@
+.menuBar {
+	float: left;
+	list-style-type: none;
+}
+
+.menuBar li {
+	background: #DDD;
+	font-size: 20pt;
+	border: 1px solid #CCC;
+	padding: 0 10px; 
+	display: block;
+	float: right;	
+}
+
+.menuBar li a {
+	text-decoration: none;
+	color: black;
+}
+
+.menuBar li:hover{
+	background: #EEE;
+}

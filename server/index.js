@@ -8,6 +8,6 @@ var app = express();
 app.listen(8000);
 
 
-app.use('/', express.static(path.join(__dirname ,'../')));
+app.use('/', express.static(path.join(__dirname ,'../client')));
 
 module.exports = app;

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app = 'app'>
+<meta charset = 'utf-8'>
+<head>
+	<link rel="stylesheet" href="app/shared/main.css">
+	<script src='bower_components/angular/angular.js'></script>
+	<script src='bower_components/angular-route/angular-route.js'></script>
+	<script src="./app/app.js"></script>
+
+	<title>Bill Splitter App</title>
+</head>
+	<body>
+		<h1>Bill Splitter</h1>
+		<ul class = 'menuBar'>
+			<li><a href = "#/">Home</a></li>
+			<li><a href = "#/newBill">New Bill</a></li>
+			<li><a href = "#/history">History</a></li>
+		</ul>
+		
+		<div ng-view></div>
+
+	</body>
+</html>
