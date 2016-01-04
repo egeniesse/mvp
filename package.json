@@ -1,0 +1,29 @@
+{
+  "name": "m-e-a-n-boilerplate",
+  "version": "1.0.0",
+  "description": "A starting point for an angular web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-seed.git"
+  },
+
+  "author": "Eric Geniesse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angular/angular-seed/issues"
+  },
+
+  "homepage": "https://github.com/angular/angular-seed#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.3.4",
+    "passport": "^0.3.2"
+  }
+}
