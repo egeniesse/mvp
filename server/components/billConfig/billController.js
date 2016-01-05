@@ -43,7 +43,7 @@ module.exports = {
 	  		 createDebt(lendee);
 	  	}
 	  }
-  	res.json({status: 'done'});
+  	
   },
   createBill : function(req, res, next) {
   	console.log('this is here!', req.body)
