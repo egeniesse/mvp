@@ -10,27 +10,34 @@ var billForm = angular.module('billForm', [])
 		};
 
 		$scope.submitForm = function(){
-			cost = $('#billCost');
-			console.log(cost.val())
-			var name = $('#billName');
+			var cost = $('#billCost').val();
+			var name = $('#billName').val();
 			var addedFriends = $scope.friends;
 
+			if(cost === '' || name === '' || addedFriends.length === 0){
+				alert('please finish filling out the form')
+			} else {
+				if(name !== ''){
+					console.log('the name value is ', name)
+				}
+			console.log(name, addedFriends.length, cost)
 			var billObj = {
-				totalCost : cost.val(),
-				billName : name.val(),
-				groupSize : addedFriends.length +1,
-				friends : addedFriends,
+				totalCost: cost,
+				billName: name,
+				groupSize: addedFriends.length + 1,
+				friends: addedFriends,
 			};
 
 			$http.post('/bills', billObj)
-				.then(function(response){
+				.then(function(response) {
 					console.log(response);
+				}).then(function() {
+					$location.path('/');
+
 				});
 
-			$location.path('/')
 
-			console.log(billObj)
-
+			}
 		};
 		
 	});
