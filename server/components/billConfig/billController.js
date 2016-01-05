@@ -1,5 +1,5 @@
 var totalBill = require('./newBillModel.js');
-var partBill = require('./individualBillModel.js')
+var partBill = require('./individualBillModel.js');
 var Q = require('q');
 
 var billsOwed = Q.nbind(partBill.find, partBill);
@@ -11,16 +11,6 @@ module.exports = {
 	moneyOwed: function (req, res, next) {
 		var username = req.body.username;
 	  billsOwed({username : username})
-	    .then(function (bills) {
-	      res.json(bills);
-	    })
-	    .fail(function (error) {
-	      next(error);
-	    });
-  },
-  moneyLentOneBill : function(req, res, next) {
-  	var leaderName = req.body.username;
-	  billsOwed({leaderName : leaderName})
 	    .then(function (bills) {
 	      res.json(bills);
 	    })
@@ -50,7 +40,7 @@ module.exports = {
   		};
   		 createDebt(lendee);
   	}
-  	res.json(status: 'done')
+  	res.json({status: 'done'});
   },
   createBill : function(req, res, next) {
   	var bill = {
@@ -61,7 +51,7 @@ module.exports = {
   		notPaid : req.notPaid
   	};
   	createCollection(bill);
-  	res.json(status: 'done')
+  	res.json({status: 'done'});
 
   }
 
