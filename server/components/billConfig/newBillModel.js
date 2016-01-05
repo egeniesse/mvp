@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var TotalBillSchema = new mongoose.Schema({
 	totalCost : String,
 	billName : String,
-	groupSize : Number,
+	splitCost : String,
 	friends : Array
 });
 

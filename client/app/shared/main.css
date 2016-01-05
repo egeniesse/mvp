@@ -1,4 +1,12 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+h1 {
+	margin: 20px 0 0 20px;
+}
 .menuBar{
+	margin-top: 30px;
 	width : 100%;
 	float: left;
 	height: 40px;
@@ -26,4 +34,65 @@
 
 .menuBar li:hover{
 	background: #EEE;
+}
+.billContainer {
+	margin-top: 150px;
+}
+
+
+.singleBill {
+  background: #EEE;
+  border: 2px solid #CCC;
+  margin: 10px auto;
+  padding: 20px;
+  width:600px;
+
+}
+.singleBill {
+	position: relative;
+}
+.singleBill div {
+	width : 450px;
+	margin: auto;
+	padding-bottom: 20px;
+}
+.singleBill ul {
+	list-style: none;
+	margin: auto;
+	position: relative;
+}
+.singleBill ul li{
+	position: relative;
+	margin: 5px auto;
+	padding: none;
+	
+	height: 30px;
+}
+
+
+.singleBill ul li p {
+	display: inline;
+	line-height: 30px;
+	padding: 10px;
+
+
+	
+}
+.singleBill ul li p:first-child {
+	font-size: 16pt;
+	font-weight: bold;
+	width: 50px;
+
+}
+
+.notPaid {
+	border-radius: 4px;
+	border: 1px solid #B99;
+	background-color: #FBB;
+}
+
+.paid {
+	border-radius: 4px;
+	border: 1px solid #9B9;
+	background-color: #BFB;
 }

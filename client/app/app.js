@@ -4,7 +4,7 @@ var app = angular.module('app', ['ngRoute', 'billApp', 'billForm']);
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-  .when ('/history', {
+  .when ('/', {
   	templateUrl: 'app/components/billView/billView.html',
   	controller: 'sendBillCtrl'
   })

@@ -1,15 +1,19 @@
 
 
-<di>
-	<div>
-		<h1 >This is the billView in the App</h1>	
-		<div ng-repeat = 'bill in bills'>
-			<h1>{{bill.billName}}</h1>
-			<p>{{bill.totalCost}}</p>
+
+	<div class = 'billContainer'>
+		
+		<div class = 'singleBill' ng-repeat = 'bill in bills'>
+			<div>
+				<h1>{{bill.billName}}</h1>
+				<p>{{bill.totalCost}}</p>
+				<p>{{bill.splitCost}}</p>
+			</div>
 			<ul ng-repeat = 'friend in bill.friends'>
-				<li>{{friend}}</li>
+				<li ng-click = 'changeStatus()' ng-class="friend.paid ? 'paid' : 'notPaid'">
+					<p>{{friend.name}}</p>
+				</li>
 			</ul>
 
 		</div>
 	</div>
-</div>

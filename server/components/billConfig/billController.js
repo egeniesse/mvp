@@ -43,7 +43,7 @@ module.exports = {
   	var bill = {
   		totalCost : req.body.totalCost,
   		billName : req.body.billName,
-  		groupSize : req.body.groupSize,
+  		splitCost : req.body.splitCost,
   		friends : req.body.friends,
   	};
   	createCollection(bill)

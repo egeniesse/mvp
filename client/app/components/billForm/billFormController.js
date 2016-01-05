@@ -13,18 +13,21 @@ var billForm = angular.module('billForm', [])
 			var cost = $('#billCost').val();
 			var name = $('#billName').val();
 			var addedFriends = $scope.friends;
-
+			var eachCost = (Number(cost)/(addedFriends.length + 1)).toFixed(2);
+			var splitCostString = 'Everyone owes $' + eachCost;
+			var costString = 'The total bill is $' + cost;
 			if(cost === '' || name === '' || addedFriends.length === 0){
 				alert('please finish filling out the form')
 			} else {
-				if(name !== ''){
-					console.log('the name value is ', name)
-				}
-			console.log(name, addedFriends.length, cost)
+
+				addedFriends= addedFriends.map(function(friend){
+					return {name : friend, paid : false};
+				});
+				console.log(addedFriends)
 			var billObj = {
-				totalCost: cost,
+				totalCost: costString,
 				billName: name,
-				groupSize: addedFriends.length + 1,
+				splitCost: splitCostString,
 				friends: addedFriends,
 			};
 

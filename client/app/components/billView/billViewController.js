@@ -7,11 +7,17 @@ var billApp = angular.module('billApp', [])
 		$http.get('/bills')
 			.then(function(response) {
 				response.data.map(function(bill) {
+					console.log(bill)
 					$scope.bills.push(bill);
 				});
 				console.log(response.data);
 			});
 	};
 	$scope.getBills();
+
+	$scope.changeStatus = function(){
+		this.friend.paid = true;
+		console.log(this);
+	}
 
 });
