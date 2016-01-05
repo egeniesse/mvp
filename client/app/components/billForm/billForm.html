@@ -1,25 +1,25 @@
 <div>
 	<form>
 		<label>
-			<span>Bill Name</span>
+			<span>Bill Name:</span>
 			<input id = 'billName' type="text">
 		</label>
 		<label> 
-			<span>Bill Total</span> 
+			<span>Bill Total:</span> 
 			<input id = 'billCost' type="text">
 		</label>
 		<label>
-			<span>Add Friend</span>
+			<span>Add Friend:</span>
 			<input id = 'newFriend'>
+			<input ng-click = 'addFriend()' value = 'add friend' type="button">
 		</label>
-		<input ng-click = 'addFriend()' value = 'add friend' type="button">
 		<div>
-		<p>Friends Added</p>
+		<p>Friends Added:</p>
 		<ul ng-repeat = 'friend in friends'>
 			<li>{{friend}}</li>
 		</ul>
 	</div>
-		<input ng-click = 'submitForm()' value = 'submit' type="button">
+		<input class = 'submit' ng-click = 'submitForm()' value = 'submit' type="button">
 	</form>
 	
 </div>

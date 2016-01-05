@@ -3,12 +3,10 @@ var billApp = angular.module('billApp', [])
 .controller('sendBillCtrl', function($scope, $http) {
 	$scope.bills = [];
 	$scope.getBills = function() {
-		console.log('hi');
 		$http.get('/bills')
 			.then(function(response) {
 				response.data.map(function(bill) {
-					console.log(bill)
-					$scope.bills.push(bill);
+					$scope.bills.unshift(bill);
 				});
 				console.log(response.data);
 			});
@@ -17,7 +15,6 @@ var billApp = angular.module('billApp', [])
 
 	$scope.changeStatus = function(){
 		this.friend.paid = true;
-		console.log(this);
 	}
 
 });

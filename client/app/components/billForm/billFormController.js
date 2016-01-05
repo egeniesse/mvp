@@ -23,7 +23,6 @@ var billForm = angular.module('billForm', [])
 				addedFriends= addedFriends.map(function(friend){
 					return {name : friend, paid : false};
 				});
-				console.log(addedFriends)
 			var billObj = {
 				totalCost: costString,
 				billName: name,

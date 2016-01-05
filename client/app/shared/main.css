@@ -56,6 +56,9 @@ h1 {
 	margin: auto;
 	padding-bottom: 20px;
 }
+.singleBill div h1 {
+	margin: 15px;
+}
 .singleBill ul {
 	list-style: none;
 	margin: auto;
