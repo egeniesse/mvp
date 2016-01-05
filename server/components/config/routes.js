@@ -7,4 +7,4 @@ module.exports = function(app, express) {
 	app.post('/lendMoney', bills.lendMoney);
 	app.post('/createBill', bills.createBill);
 
-}
+};
