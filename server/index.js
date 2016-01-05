@@ -4,6 +4,8 @@ var path = require('path');
 
 var app = express();
 
+mongoose.connect('mongodb://127.0.0.1/billSplitter');
+
 
 app.listen(8000);
 
