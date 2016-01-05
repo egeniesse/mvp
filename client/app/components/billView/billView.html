@@ -1,8 +1,15 @@
 
 
-<div ng-app='billApp'>
-	<div ng-controller='sendBillCtrl'>
-		<input type="button" ng-model = 'hello' ng-click = 'postBill()' value='click me'>
-		<h1 >This is the mainView in the App</h1>	
+<di>
+	<div>
+		<h1 >This is the billView in the App</h1>	
+		<div ng-repeat = 'bill in bills'>
+			<h1>{{bill.billName}}</h1>
+			<p>{{bill.totalCost}}</p>
+			<ul ng-repeat = 'friend in bill.friends'>
+				<li>{{friend}}</li>
+			</ul>
+
+		</div>
 	</div>
 </div>

@@ -10,19 +10,19 @@ var app = express();
 mongoose.connect('mongodb://localhost/billSplitter');
 
 middleware(app, express);
-app.get('/billsOwed', bills.moneyOwed, function(req, res, next){
+app.get('/friends', bills.getFriends, function(req, res, next){
 	res.send();
 	next();
 });
-app.get('/mainBill', bills.moneyLentTotal, function(req, res, next){
+app.get('/bills', bills.getBills, function(req, res, next){
 	res.send();
 	next();
 });
-app.post('/billsOwed', bills.lendMoney, function(req, res, next){
+app.post('/friends', bills.addFriend, function(req, res, next){
 	res.send();
 	next();
 });
-app.post('/mainBill', bills.createBill, function(req, res, next){
+app.post('/bills', bills.createBill, function(req, res, next){
 	res.send();
 	next();
 });

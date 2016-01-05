@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['ngRoute', 'billApp']);
+var app = angular.module('app', ['ngRoute', 'billApp', 'billForm']);
 
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -9,6 +9,7 @@ app.config(['$routeProvider', function($routeProvider) {
   	controller: 'sendBillCtrl'
   })
   .when('/createBill', {
-  	templateUrl: 'app/components/billForm/billForm.html'
+  	templateUrl: 'app/components/billForm/billForm.html',
+  	controller: 'sendFormCtrl'
   });
 }]);

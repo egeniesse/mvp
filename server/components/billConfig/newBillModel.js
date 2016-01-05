@@ -1,12 +1,10 @@
 var mongoose = require('mongoose');
 
 var TotalBillSchema = new mongoose.Schema({
-	totalCost : Number,
+	totalCost : String,
 	billName : String,
 	groupSize : Number,
-	leaderName : String,
-	alreadyPaid : Number,
-	notPaid : Number
+	friends : Array
 });
 
 module.exports = mongoose.model('TotalBill', TotalBillSchema);

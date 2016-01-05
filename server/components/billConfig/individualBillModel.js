@@ -1,11 +1,8 @@
 var mongoose = require('mongoose');
 
-var PartBillSchema = new mongoose.Schema({
-	amountOwed : Number,
-	userName : String,
-	leaderName : String,
-	billName : String,
-	paidStatus : String,
+var FriendSchema = new mongoose.Schema({
+	
+	username : String,
 });
 
-module.exports = mongoose.model('PartBill', PartBillSchema);
+module.exports = mongoose.model('Friends', FriendSchema);

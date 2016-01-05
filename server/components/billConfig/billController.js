@@ -1,27 +1,16 @@
 var totalBill = require('./newBillModel.js');
-var partBill = require('./individualBillModel.js');
+var friends = require('./individualBillModel.js');
 var Q = require('q');
 var mongoose = require('mongoose');
-var billsOwed = Q.nbind(partBill.find, partBill);
-var billsLend = Q.nbind(totalBill.find, totalBill);
-var createDebt = Q.nbind(partBill.create, partBill);
+var allFriends = Q.nbind(friends.find, friends);
+var allBills = Q.nbind(totalBill.find, totalBill);
+var addFriend = Q.nbind(friends.create, friends);
 var createCollection = Q.nbind(totalBill.create, totalBill);
 
 module.exports = {
-	moneyOwed: function (req, res, next) {
-		var username = req.body.username;
-	  billsOwed()
-	    .then(function (bills) {
-	    	console.log(bills);
-	      res.json(bills);
-	    })
-	    .fail(function (error) {
-	      next(error);
-	    });
-  },
-  moneyLentTotal : function(req, res, next) {
-  	var leaderName = req.body.username;
-	  billsLend({leaderName : leaderName})
+	getFriends: function (req, res, next) {
+
+	  allFriends()
 	    .then(function (bills) {
 	      res.json(bills);
 	    })
@@ -29,33 +18,38 @@ module.exports = {
 	      next(error);
 	    });
   },
-  lendMoney : function(req, res, next) {
-  	var lendees = req.body.users;
-  	if(Array.isArray(lendees)){
-	  	for (var i = 0; i < lendees.length; i++){
-	  		var lendee = {
-	  			amountOwed : lendees[i].owed,
-	  			username : lendees[i].username,
-	  			leaderName : lendees[i].leaderName,
-	  			billName : lendees[i].billName,
-	  			paidStatus : lendees[i].paidStatus
-	  		};
-	  		 createDebt(lendee);
-	  	}
-	  }
+
+  getBills : function(req, res, next) {
   	
+	  allBills()
+	    .then(function (bills) {
+	      res.json(bills);
+	    })
+	    .fail(function (error) {
+	      next(error);
+	    });
   },
+  addFriend : function(req, res, next) {
+  	var friend = {name :'req.body.friend'};
+	  		addFriend(friend)
+		  		.then(function(friend){
+		  			res.send(friend);
+		  		});
+  },
+
+
   createBill : function(req, res, next) {
-  	console.log('this is here!', req.body)
+  	
   	var bill = {
   		totalCost : req.body.totalCost,
+  		billName : req.body.billName,
   		groupSize : req.body.groupSize,
-  		leaderName : req.body.leaderName,
-  		alreadyPaid : req.body.alreadyPaid,
-  		notPaid : req.body.notPaid
+  		friends : req.body.friends,
   	};
-  	createCollection(bill);
-  	res.json({status: 'done'});
+  	createCollection(bill)
+  		.then(function(obj){
+  			res.send(obj);
+  		});
   }
 };
 

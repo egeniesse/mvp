@@ -1,13 +1,18 @@
 <div>
-	<form action="">
-		<label for = 'totalBill'>Total Bill</label>
-		<input id = 'totalBill' type="text">
-		<label for = 'userName'>Your Name</label>
-		<input id = 'userName' type="text">
-		<label for = 'billName'>Bill Label</label>
+	<form>
+		<label for = 'billCost'>Bill Total</label>
+		<input id = 'billCost' type="text">
+		<label for = 'billName'>Bill Name</label>
 		<input id = 'billName' type="text">
-		<label for = 'friends'>Friends</label>
-		<textarea id = 'friends'></textarea>
-		<input value = 'submit' type="submit">
+		<label for = 'newFriend'>Add Friend</label>
+		<input id = 'newFriend'>
+		<input ng-click = 'addFriend()' value = 'add friend' type="button">
+		<input ng-click = 'submitForm()' value = 'submit' type="button">
 	</form>
+	<div>
+		<p>Friends Added</p>
+		<ul ng-repeat = 'friend in friends'>
+			<li>{{friend}}</li>
+		</ul>
+	</div>
 </div>
