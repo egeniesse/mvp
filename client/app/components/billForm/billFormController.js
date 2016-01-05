@@ -17,7 +17,7 @@ var billForm = angular.module('billForm', [])
 			var splitCostString = 'Everyone owes $' + eachCost;
 			var costString = 'The total bill is $' + cost;
 			if(cost === '' || name === '' || addedFriends.length === 0){
-				alert('please finish filling out the form')
+				alert('please finish filling out the form');
 			} else {
 
 				addedFriends= addedFriends.map(function(friend){

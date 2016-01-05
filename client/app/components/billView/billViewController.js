@@ -8,13 +8,20 @@ var billApp = angular.module('billApp', [])
 				response.data.map(function(bill) {
 					$scope.bills.unshift(bill);
 				});
-				console.log(response.data);
 			});
 	};
 	$scope.getBills();
 
-	$scope.changeStatus = function(){
+	$scope.changeStatus = function() {
+		var billObj = this.$parent.bill;
+
 		this.friend.paid = true;
-	}
+		console.log(this.$parent.bill);
+		$http.put('/bills', billObj)
+			.then(function(response){
+				console.log(response);
+			});
+
+	};
 
 });

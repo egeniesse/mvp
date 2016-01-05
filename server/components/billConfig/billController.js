@@ -8,6 +8,14 @@ var addFriend = Q.nbind(friends.create, friends);
 var createCollection = Q.nbind(totalBill.create, totalBill);
 
 module.exports = {
+	updateBill: function (req, res, next) {
+		totalBill.findOne({_id : req.body._id}, function(err, bill){
+			bill.friends = req.body.friends;
+			bill.save();
+		}).then(function(err, result){
+				res.send(result);
+			});
+	},
 	getFriends: function (req, res, next) {
 
 	  allFriends()
